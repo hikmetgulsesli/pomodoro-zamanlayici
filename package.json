@@ -8,11 +8,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hikmetgulsesli/pomodoro-zamanlayici.git"
+    "url": "https://github.com/hikmetgulsesli/pomodoro-zamanlayici.git"
   },
   "keywords": [],
   "author": "",
