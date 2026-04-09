@@ -1,0 +1,24 @@
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  min-height: 100vh;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: #4ecdc4;
+  color: #1a1a2e;
+  font-weight: 600;
+}
