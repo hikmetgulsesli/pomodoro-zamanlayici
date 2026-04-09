@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Temporal Sanctuary - Yükleniyor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-on-surface": "#313030",
+                      "tertiary-container": "#b38778",
+                      "tertiary-fixed": "#ffdbd0",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "secondary-fixed-dim": "#70d8c8",
+                      "outline": "#aa8980",
+                      "on-tertiary-fixed": "#2f140b",
+                      "on-primary-fixed": "#3b0900",
+                      "surface-dim": "#131313",
+                      "primary-fixed": "#ffdbd1",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-container": "#00302a",
+                      "on-secondary": "#003731",
+                      "surface-container-highest": "#353534",
+                      "primary-container": "#fc5929",
+                      "background": "#131313",
+                      "error": "#ffb4ab",
+                      "surface-container": "#201f1f",
+                      "inverse-primary": "#b02e00",
+                      "on-secondary-fixed-variant": "#005048",
+                      "on-primary-container": "#541100",
+                      "surface-variant": "#353534",
+                      "surface-container-low": "#1c1b1b",
+                      "primary-fixed-dim": "#ffb5a0",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#00201c",
+                      "on-primary": "#601500",
+                      "outline-variant": "#5b4139",
+                      "surface-bright": "#393939",
+                      "surface": "#131313",
+                      "error-container": "#93000a",
+                      "on-primary-fixed-variant": "#872100",
+                      "secondary": "#70d8c8",
+                      "primary": "#ffb5a0",
+                      "tertiary-fixed-dim": "#edbbac",
+                      "on-background": "#e5e2e1",
+                      "on-surface-variant": "#e4beb4",
+                      "on-tertiary-container": "#402218",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed": "#8df5e4",
+                      "tertiary": "#edbbac",
+                      "on-tertiary": "#47281e",
+                      "secondary-container": "#32a192",
+                      "on-tertiary-fixed-variant": "#613e33",
+                      "surface-tint": "#ffb5a0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.4; }
+            100% { transform: scale(0.9); opacity: 0.8; }
+        }
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-pulse-ring {
+            animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .animate-float {
+            animation: subtle-float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+<!-- Background Atmospheric Elements -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+<div class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute -bottom-[10%] -right-[5%] w-[50%] h-[50%] rounded-full bg-secondary/5 blur-[100px]"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex flex-col items-center justify-center space-y-12">
+<!-- Loading Visual Anchor -->
+<div class="relative flex items-center justify-center">
+<!-- Outermost Glow Ring -->
+<div class="absolute w-48 h-48 rounded-full border border-primary/10 animate-pulse-ring"></div>
+<!-- Secondary Decorative Ring -->
+<div class="absolute w-32 h-32 rounded-full border-[0.5px] border-secondary/20 scale-125" style="animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite reverse;"></div>
+<!-- Central Icon Container -->
+<div class="relative w-24 h-24 flex items-center justify-center bg-surface-container-high rounded-full shadow-[0_24_48px_rgba(0,0,0,0.4)] border border-outline-variant/10 animate-float">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'wght' 200;">
+                    hourglass_empty
+                </span>
+<!-- Inner Progress Orbit -->
+<div class="absolute inset-0 border-t-2 border-primary rounded-full" style="animation: spin 1.5s linear infinite;"></div>
+</div>
+</div>
+<!-- Typography Branding -->
+<div class="text-center space-y-4">
+<h1 class="font-headline font-extrabold text-2xl tracking-tighter text-primary">
+                Temporal Sanctuary
+            </h1>
+<!-- Dynamic Loading Status -->
+<div class="flex flex-col items-center space-y-2">
+<p class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant opacity-60">
+                    Zaman Akışı Hazırlanıyor
+                </p>
+<div class="flex items-center space-x-1">
+<span class="font-body text-sm text-on-surface font-medium">Yükleniyor</span>
+<span class="flex space-x-1">
+<span class="w-1 h-1 bg-primary rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+<span class="w-1 h-1 bg-primary rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+<span class="w-1 h-1 bg-primary rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Decorative Bottom Footer (Optional subtle branding) -->
+<div class="fixed bottom-12 left-0 w-full flex justify-center opacity-20 hover:opacity-40 transition-opacity duration-700">
+<div class="flex items-center space-x-2">
+<div class="h-px w-8 bg-on-surface-variant"></div>
+<span class="font-label text-[10px] tracking-widest uppercase">Zihinsel Dinginlik Alanı</span>
+<div class="h-px w-8 bg-on-surface-variant"></div>
+</div>
+</div>
+<!-- Hidden Grid Layer for Texture -->
+<div class="fixed inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle, #E4BEB4 1px, transparent 1px); background-size: 40px 40px;">
+</div>
+</body></html>

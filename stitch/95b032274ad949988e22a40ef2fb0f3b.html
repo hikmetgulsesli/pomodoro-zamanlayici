@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-container": "#b38778",
+                    "tertiary-fixed": "#ffdbd0",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed-dim": "#70d8c8",
+                    "outline": "#aa8980",
+                    "on-tertiary-fixed": "#2f140b",
+                    "on-primary-fixed": "#3b0900",
+                    "surface-dim": "#131313",
+                    "primary-fixed": "#ffdbd1",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-container": "#00302a",
+                    "on-secondary": "#003731",
+                    "surface-container-highest": "#353534",
+                    "primary-container": "#fc5929",
+                    "background": "#131313",
+                    "error": "#ffb4ab",
+                    "surface-container": "#201f1f",
+                    "inverse-primary": "#b02e00",
+                    "on-secondary-fixed-variant": "#005048",
+                    "on-primary-container": "#541100",
+                    "surface-variant": "#353534",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#00201c",
+                    "on-primary": "#601500",
+                    "outline-variant": "#5b4139",
+                    "surface-bright": "#393939",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#872100",
+                    "secondary": "#70d8c8",
+                    "primary": "#ffb5a0",
+                    "tertiary-fixed-dim": "#edbbac",
+                    "on-background": "#e5e2e1",
+                    "on-surface-variant": "#e4beb4",
+                    "on-tertiary-container": "#402218",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#8df5e4",
+                    "tertiary": "#edbbac",
+                    "on-tertiary": "#47281e",
+                    "secondary-container": "#32a192",
+                    "on-tertiary-fixed-variant": "#613e33",
+                    "surface-tint": "#ffb5a0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .error-glow {
+            background: radial-gradient(circle at center, rgba(252, 89, 41, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-surface-dim text-on-surface font-body selection:bg-primary-container/30">
+<header class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-2xl shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<span class="font-['Manrope'] font-extrabold text-[#FFB5A0] tracking-tighter text-lg">Temporal Sanctuary</span>
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#2A2A2A] transition-colors duration-300 p-2 rounded-full scale-95 active:duration-150">
+<span class="material-symbols-outlined text-[#FFB5A0]">account_circle</span>
+</button>
+</div>
+</div>
+<div class="bg-gradient-to-b from-[#1C1B1B] to-transparent h-px"></div>
+</header>
+<main class="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+<div class="absolute inset-0 error-glow pointer-events-none"></div>
+<div class="max-w-xl w-full relative z-10 flex flex-col items-center text-center">
+<div class="mb-12 relative">
+<div class="w-32 h-32 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden group">
+<span class="material-symbols-outlined text-primary text-6xl opacity-80 group-hover:scale-110 transition-transform duration-500" data-icon="history_toggle_off">history_toggle_off</span>
+<div class="absolute inset-0 bg-primary/5 blur-xl"></div>
+</div>
+<div class="absolute -bottom-2 -right-2 w-12 h-12 bg-error-container rounded-full flex items-center justify-center shadow-2xl">
+<span class="material-symbols-outlined text-on-error-container text-2xl" data-icon="error" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">
+                Bir hata oluştu
+            </h1>
+<p class="font-body text-on-surface-variant text-lg max-w-md mb-12">
+                Zaman akışında beklenmedik bir kırılma yaşandı. Tapınağın dengesini yeniden kurmaya çalışıyoruz.
+            </p>
+<div class="w-full bg-surface-container-low p-6 rounded-2xl mb-12 text-left relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-error/40"></div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="terminal">terminal</span>
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60 block mb-2">Hata Detayları</span>
+<code class="font-mono text-sm text-on-surface-variant leading-relaxed">
+                            ERROR_CODE: TEMPORAL_SYNC_FAILURE_0x404<br/>
+                            MESSAGE: Sanctuary synchronization process interrupted by external sequence.
+                        </code>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-primary text-on-primary font-headline font-bold px-10 py-4 rounded-full flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                    Yeniden Dene
+                </button>
+<button class="bg-surface-container-high text-on-surface font-headline font-semibold px-10 py-4 rounded-full flex items-center justify-center gap-2 transition-all duration-300 hover:bg-surface-container-highest active:scale-95">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    Ana Sayfaya Dön
+                </button>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 opacity-10 pointer-events-none hidden md:block">
+<span class="font-headline text-[12rem] font-extrabold select-none tracking-tighter">404</span>
+</div>
+</main>
+<footer class="fixed bottom-0 w-full z-40 bg-[#1C1B1B]/60 backdrop-blur-xl md:hidden">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4">
+<div class="flex flex-col items-center justify-center text-[#E4BEB4] opacity-40 px-6 py-2">
+<span class="material-symbols-outlined mb-1">timer</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">Zamanlayıcı</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#E4BEB4] opacity-40 px-6 py-2">
+<span class="material-symbols-outlined mb-1">bar_chart</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">İstatistikler</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#E4BEB4] opacity-40 px-6 py-2">
+<span class="material-symbols-outlined mb-1">settings</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">Ayarlar</span>
+</div>
+</div>
+</footer>
+</body></html>

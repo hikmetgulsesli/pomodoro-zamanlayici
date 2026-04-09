@@ -1,0 +1,31 @@
+# pomodoro-zamanlayici
+## 1 Genel
+Proje: pomodoro-zamanlayici Platform: Web SPA. Pomodoro teknigi zamanlayicisi. 25 dakika calisma, 5 dakika kisa mola, 15 dakika uzun mola. Baslat/durdur/sifirla butonlari. Counter. localStorage gecmis. Bonus: theme toggle, settings (sure ozellestirme + ses), istatistik sayfasi (gun/hafta/ay grafikleri). Modern minimal.
+## 2 Ozellikler
+1 Zamanlayici 25/5/15 dakika modlar
+2 Baslat Durdur Sifirla butonlari
+3 Pomodoro Counter Tamamlanan sayisi
+4 Gecmis localStorage gecmis
+5 Theme Toggle Acik/Koyu
+6 Settings Sure ozellestirme ses ayari
+7 Istatistik Gun/hafta/ay grafikleri
+## 3 Ekranlar
+| # Ekran Tur Aciklama |
+|---|---|
+| 1 Ana Zamanlayici dashboard Zamanlayici counter |
+| 2 Istatistik dashboard Grafikler |
+| 3 Ayarlar settings Sure ses tema |
+| 4 Bos Durum empty-state |
+| 5 Yukleme loading |
+| 6 Hata error |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Temporal Sanctuary - Zamanlayıcı</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#b38778",
+                        "tertiary-fixed": "#ffdbd0",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#70d8c8",
+                        "outline": "#aa8980",
+                        "on-tertiary-fixed": "#2f140b",
+                        "on-primary-fixed": "#3b0900",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffdbd1",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#00302a",
+                        "on-secondary": "#003731",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#fc5929",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#b02e00",
+                        "on-secondary-fixed-variant": "#005048",
+                        "on-primary-container": "#541100",
+                        "surface-variant": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#00201c",
+                        "on-primary": "#601500",
+                        "outline-variant": "#5b4139",
+                        "surface-bright": "#393939",
+                        "surface": "#131313",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#872100",
+                        "secondary": "#70d8c8",
+                        "primary": "#ffb5a0",
+                        "tertiary-fixed-dim": "#edbbac",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#e4beb4",
+                        "on-tertiary-container": "#402218",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#8df5e4",
+                        "tertiary": "#edbbac",
+                        "on-tertiary": "#47281e",
+                        "secondary-container": "#32a192",
+                        "on-tertiary-fixed-variant": "#613e33",
+                        "surface-tint": "#ffb5a0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timer-pulse {
+            background: radial-gradient(circle at center, rgba(255, 181, 160, 0.15) 0%, transparent 70%);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-primary-container/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-2xl shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="font-['Manrope'] font-extrabold text-[#FFB5A0] tracking-tighter text-xl">Temporal Sanctuary</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-[#FFB5A0] hover:bg-[#2A2A2A] transition-colors duration-300 px-3 py-1 rounded-lg" href="#">Zamanlayıcı</a>
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-[#E4BEB4] opacity-60 hover:bg-[#2A2A2A] transition-colors duration-300 px-3 py-1 rounded-lg" href="#">İstatistikler</a>
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-[#E4BEB4] opacity-60 hover:bg-[#2A2A2A] transition-colors duration-300 px-3 py-1 rounded-lg" href="#">Ayarlar</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#FFB5A0] hover:bg-[#2A2A2A] p-2 rounded-full transition-colors duration-300">account_circle</button>
+</div>
+</div>
+<div class="bg-gradient-to-b from-[#1C1B1B] to-transparent h-px w-full"></div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Timer Section (Signature Component) -->
+<section class="lg:col-span-8 flex flex-col items-center justify-center space-y-12">
+<!-- Session Tabs (Asymmetric/Off-grid placement) -->
+<div class="flex bg-surface-container-low p-1.5 rounded-full self-start ml-4 lg:ml-12">
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-primary font-headline font-bold text-sm transition-all duration-300">Çalışma</button>
+<button class="px-6 py-2.5 rounded-full text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-highest/50 transition-all duration-300">Kısa Mola</button>
+<button class="px-6 py-2.5 rounded-full text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-highest/50 transition-all duration-300">Uzun Mola</button>
+</div>
+<!-- Main Countdown Area -->
+<div class="relative w-full aspect-square max-w-[480px] flex items-center justify-center">
+<!-- Background Pulse -->
+<div class="absolute inset-0 timer-pulse rounded-full animate-pulse"></div>
+<!-- Progress Ring (Simulated with Conic Gradient) -->
+<div class="absolute inset-4 rounded-full border-[12px] border-surface-container-low"></div>
+<div class="absolute inset-4 rounded-full border-[12px] border-transparent" style="background-image: conic-gradient(#ffb5a0 75%, transparent 75%); border-radius: 9999px; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+<div class="text-center z-10">
+<h2 class="text-on-surface-variant font-headline font-medium tracking-widest uppercase text-xs mb-2">Odaklanma Zamanı</h2>
+<div class="font-headline font-extrabold text-[120px] leading-none text-on-surface tabular-nums tracking-tighter">
+                        25:00
+                    </div>
+</div>
+</div>
+<!-- Controls -->
+<div class="flex items-center gap-6">
+<button class="w-16 h-16 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-2xl">refresh</span>
+</button>
+<button class="px-12 py-5 rounded-full bg-primary text-on-primary font-headline font-extrabold text-xl shadow-[0_24px_48px_rgba(0,0,0,0.4)] hover:scale-105 active:scale-95 transition-all">
+                    BAŞLAT
+                </button>
+<button class="w-16 h-16 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-2xl">stop</span>
+</button>
+</div>
+</section>
+<!-- Sidebar / Bento Stats -->
+<section class="lg:col-span-4 space-y-6 w-full">
+<!-- Daily Progress Card -->
+<div class="bg-surface-container-low p-8 rounded-[32px] space-y-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Bugünkü İlerleme</h3>
+<p class="text-on-surface-variant text-sm mt-1">Hadefinize ulaşmaya çok az kaldı.</p>
+</div>
+<div class="bg-secondary/15 p-3 rounded-2xl">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-label">
+<span class="text-on-surface-variant">Tamamlanan</span>
+<span class="text-secondary font-bold">3 / 4 Pomodoro</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-surface-container-high p-4 rounded-2xl">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Toplam Süre</span>
+<span class="font-headline font-bold text-lg text-on-surface">1sa 15dk</span>
+</div>
+<div class="bg-surface-container-high p-4 rounded-2xl">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Verimlilik</span>
+<span class="font-headline font-bold text-lg text-secondary">%85</span>
+</div>
+</div>
+</div>
+<!-- Task List Card -->
+<div class="bg-surface-container-low p-8 rounded-[32px] space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline font-bold text-xl text-on-surface">Görev Listesi</h3>
+<button class="material-symbols-outlined text-primary p-1">add_circle</button>
+</div>
+<div class="space-y-4">
+<div class="group flex items-center gap-4 p-4 rounded-2xl hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="w-6 h-6 border-2 border-primary/40 rounded-lg flex items-center justify-center transition-all group-hover:border-primary"></div>
+<span class="text-on-surface font-body text-sm flex-1">Proje Tasarım Sunumu</span>
+<span class="text-xs text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded">25dk</span>
+</div>
+<div class="group flex items-center gap-4 p-4 rounded-2xl bg-surface-container-high transition-all cursor-pointer">
+<div class="w-6 h-6 bg-secondary border-2 border-secondary rounded-lg flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-on-secondary text-xs">check</span>
+</div>
+<span class="text-on-surface-variant font-body text-sm flex-1 line-through">E-postaları Cevapla</span>
+<span class="text-xs text-on-secondary-fixed-variant bg-secondary/20 px-2 py-1 rounded">Bitti</span>
+</div>
+<div class="group flex items-center gap-4 p-4 rounded-2xl hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="w-6 h-6 border-2 border-primary/40 rounded-lg flex items-center justify-center transition-all group-hover:border-primary"></div>
+<span class="text-on-surface font-body text-sm flex-1">Kod İncelemesi</span>
+<span class="text-xs text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded">50dk</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#1C1B1B]/60 backdrop-blur-xl shadow-[0_-8px_32px_rgba(0,0,0,0.5)] rounded-t-[32px] overflow-hidden">
+<button class="flex flex-col items-center justify-center bg-[#FC5929]/15 text-[#FFB5A0] rounded-[20px] px-6 py-2 transition-all duration-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">Zamanlayıcı</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#E4BEB4] opacity-40 px-6 py-2 hover:opacity-100 hover:bg-[#2A2A2A]/40 transition-all duration-300">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">İstatistikler</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#E4BEB4] opacity-40 px-6 py-2 hover:opacity-100 hover:bg-[#2A2A2A]/40 transition-all duration-300">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">Ayarlar</span>
+</button>
+</footer>
+</body></html>
