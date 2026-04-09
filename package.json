@@ -8,11 +8,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hikmetgulsesli/pomodoro-zamanlayici.git"
+    "url": "https://github.com/hikmetgulsesli/pomodoro-zamanlayici.git"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/hikmetgulsesli/pomodoro-zamanlayici#readme",
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@testing-library/jest-dom": "^6.9.1",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.0",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
